@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Klich3D</title>
+    <link rel="stylesheet" href="../frontend/css/estilo.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="../index.html">Inicio</a>
+            <a href="./carrito.html">Carrito</a>
+            <a href="../pages/presupuesto.html">Presupuesto</a>
+        </div>
+        <h1>Servicio de Impresión 3D</h1>
+    </header>
+
+    <main>
+        <section class="cart">
+            <h2>Carrito de Compras</h2>
+            <div id="cart-items" class="card-container"></div>
+            <button id="clear-cart" class="btn">Vaciar Carrito</button>
+            <button id="checkout" class="btn">Finalizar Compra</button>
+            <div id="cart-total">
+                <h2>Total: <span id="total-price">$0.00</span></h2>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Klich3D - Todos los derechos reservados</p>
+    </footer>
+
+    <script type="module" src="../frontend/js/carrito.js"></script>
+</body>
+</html>

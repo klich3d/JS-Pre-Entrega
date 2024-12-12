@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Impresión 3D - Klich3D</title>
+    <link rel="stylesheet" href="../frontend/css/estilo.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="../index.html">Inicio</a>
+            <a href="../pages/carrito.html">Carrito</a>
+            <a href="./presupuesto.html">Presupuesto</a>
+        </div>
+        <h1>Servicio de Impresión 3D</h1>
+    </header>
+
+    <main>
+        <section class="simulator">
+            <h2>Simulador de Impresión 3D</h2>
+            <form id="simulator-form">
+                <label for="material">Selecciona material:</label>
+                <select id="material" name="material">
+                    <option value="PLA">PLA</option>
+                    <option value="ABS">ABS</option>
+                    <option value="PETG">PETG</option>
+                    <option value="Resina">Resina</option>
+                </select>
+
+                <label for="weight">Peso del modelo (en gramos):</label>
+                <input type="number" id="weight" name="weight" required>
+
+                <label for="time">Tiempo de impresión (en horas):</label>
+                <input type="number" id="time" name="time" required>
+
+                <label for="price">Precio por hora de impresora:</label>
+                <input type="number" id="price" name="price" required>
+
+                <label for="extra">Otros costos:</label>
+                <input type="number" id="extra" name="extra" required>
+
+                <label for="profit">Porcentaje de ganancia:</label>
+                <input type="number" id="profit" name="profit" required>
+
+                <button type="submit" class="btn">Calcular Presupuesto</button>
+            </form>
+
+            <div id="presupuesto-result"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Klich3D - Todos los derechos reservados</p>
+    </footer>
+
+    <script type="module" src="../frontend/js/presupuesto.js"></script>
+</body>
+</html>

@@ -1,72 +1,229 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+    box-sizing: border-box;
 }
 
-h1 {
-    font-size: 2.5rem;
+body section p{
+    margin: 30px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: rgb(59, 129, 123);
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+h1, h2 {
     text-align: center;
+    color: rgb(59, 129, 123);
+}
+
+h2{
     margin-top: 30px;
-    color: #4CAF50;
+    margin-bottom: 50px;
 }
 
-.container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
+header {
+    background-color: rgb(59, 129, 123);
     padding: 20px;
+    color: white;
+    text-align: center;
 }
 
-button {
-    background-color: #4CAF50;
+header h1 {
+    font-size: 36px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.navbar a {
+    margin: 0 15px;
     color: white;
-    font-size: 1.2rem;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: rgb(59, 129, 123);
+    padding: 10px;
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+}
+
+section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn {
+    background-color: rgb(99, 174, 166);
+    color: white;
     padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: rgb(59, 129, 123);
+}
+
+.simulator form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+.simulator label {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.simulator input, .simulator select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(59, 129, 123);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.simulator button {
+    align-self: center;
+    background-color: rgb(99, 174, 166);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.simulator button:hover {
+    background-color: rgb(59, 129, 123);
+}
+
+.cart {
+    margin-top: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    gap: 20px;
+}
+
+.filamento-card {
+    background-color: rgba(59, 129, 123, 0.205);
+    border-radius: 40px;
+}
+
+.card {
+    border: 1px solid rgb(59, 129, 123);
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    background-color: rgba(59, 129, 123, 0.432);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.card select {
+    padding: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.card button {
+    background-color: rgb(99, 174, 166);
+    color: white;
     border: none;
+    padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
-button:hover {
-    background-color: #45a049;
+.card button:hover {
+    background-color: rgb(59, 129, 123);
 }
 
-.resultados {
+#cart-items {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+#cart-total {
     margin-top: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 20px;
+}
+
+#clear-cart, #checkout {
+    background-color: rgb(99, 174, 166);
+    color: white;
+    padding: 10px 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-.resultados p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #555;
-}
-input[type="text"], input[type="number"] {
-    padding: 10px;
-    font-size: 1rem;
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+#clear-cart:hover, #checkout:hover {
+    background-color: rgb(59, 129, 123);
 }
 
-input[type="text"]:focus, input[type="number"]:focus {
-    outline: none;
-    border-color: #4CAF50;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
 
-.alerta {
-    color: red;
-    font-size: 1.2rem;
-    margin-top: 20px;
+    .navbar a {
+        margin-bottom: 10px;
+    }
+
+    .simulator form {
+        max-width: 90%;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
 }

@@ -3,21 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Presupuesto de Impresión 3D</title>
+    <title>Inicio - Klich3D</title>
     <link rel="stylesheet" href="./frontend/css/estilo.css">
 </head>
 <body>
+    <header>
+        <div class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="./pages/carrito.html">Carrito</a>
+            <a href="./pages/presupuesto.html">Presupuesto</a>
+        </div>
+        <h1>Servicio de Impresión 3D</h1>
+    </header>
 
-    <div class="container">
-        <h1>Calculadora de Presupuesto para Impresión 3D</h1>
-        <p>Introduce los datos en los cuadros de diálogo que aparecerán al hacer clic en el botón.</p>
-        
-        <button onclick="iniciarCalculo()">Calcular presupuesto</button>
+    <section>
+        <h2>Bienvenido a Klich3D</h2>
+        <p>En Klich3D ofrecemos servicios de impresión 3D personalizados y venta de filamentos de alta calidad.</p>
+        <p> Elige tus filamentos, agrega al carrito y realiza tu compra o consulta de presupuesto.</p>
+        <a href="./pages/carrito.html" class="btn">Ir al carrito</a>
+        <a href="./pages/presupuesto.html" class="btn">Simulador de presupuesto</a>
+    </section>
 
-        <div class="resultados" id="resultados"></div>
-    </div>
-
-    <script src="frontend/js/app.js"></script>
-
+    <footer>
+        <p>&copy; 2024 Klich3D</p>
+    </footer>
 </body>
 </html>
